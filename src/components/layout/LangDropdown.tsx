@@ -26,13 +26,13 @@ const LangDropdown: React.FC<{ className?: string }> = ({ className }) => {
       className={"text-customBlack ml-16 relative cursor-pointer " + className}
       ref={ref}
     >
-      <div className="flex gap-4 items-center" onClick={() => setOpen(!open)}>
-        <button>{i18n.language}</button>
-        <Arrow className={`w-3 ${open ? "rotate-180" : ""}`} />
+      <div className="flex gap-4 items-center " onClick={() => setOpen(!open)}>
+        <button className="uppercase">{i18n.language}</button>
+        <Arrow className={`w-5 ${open ? "rotate-180" : ""}`} />
       </div>
       {open && (
         <button
-          className="absolute"
+          className="absolute uppercase"
           onClick={() => {
             i18n.changeLanguage(secondLanguage);
             setOpen(false);

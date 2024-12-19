@@ -7,6 +7,7 @@ export default {
         primary: "#fd5521",
         textPrimary: "#ff4040",
         customBlack: "#333333",
+        textHover: "#757575",
       },
     },
   },

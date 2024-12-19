@@ -3,6 +3,7 @@ import Backdrop from "./Backdrop";
 import { Link } from "react-router";
 import LangDropdown from "./LangDropdown";
 import CloseBtn from "../shared/CloseBtn";
+import { useTranslation } from "react-i18next";
 type SidebarProps = {
   isSidebarVisible: boolean;
   setIsSidebarVisible: React.Dispatch<React.SetStateAction<boolean>>;
@@ -13,6 +14,8 @@ const Sidebar: React.FC<SidebarProps> = ({
   setIsSidebarVisible,
   navLinks,
 }) => {
+  const { t } = useTranslation();
+
   const variants = {
     hidden: { transform: "translateX(-100%)" },
     visible: { transform: "translateX(0)" },
@@ -31,13 +34,13 @@ const Sidebar: React.FC<SidebarProps> = ({
       >
         <div className="h-20 flex items-center justify-between p-7">
           <div></div>
-          <LangDropdown className="w-12 font-bold" />
+          <LangDropdown className="font-bold" />
           <CloseBtn
             onClick={() => setIsSidebarVisible(false)}
             className="text-primary w-12"
           />
         </div>
-        <div className="pl-[37px] pt-[85px] flex flex-col gap-12 h-full w-full">
+        <div className="flex flex-col items-center gap-12 mt-12 h-full w-full">
           {navLinks.map(({ to, label }) => (
             <Link
               onClick={() => setIsSidebarVisible(false)}
@@ -45,7 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               to={to}
               key={label + to}
             >
-              {label}
+              {t(label)}
             </Link>
           ))}
         </div>
