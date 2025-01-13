@@ -2,6 +2,7 @@ import { useState } from "react";
 import Modal from "../components/shared/Modal";
 import { brands } from "../data/brands";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 const Brands = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeBrand, setActiveBrand] = useState<{
@@ -13,11 +14,17 @@ const Brands = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="my-9">
+    <section className="py-9">
       <h1 className="bg-primary lg:w-1/3 w-full mx-auto text-white text-center py-3 text-3xl font-bold mb-5">
         {t("brands")}
       </h1>
-      <div className="flex flex-wrap justify-center gap-5">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="flex flex-wrap justify-center gap-5"
+      >
         {brands.map(({ id, image, name }) => (
           <div
             key={id + name}
@@ -30,7 +37,7 @@ const Brands = () => {
             <img className="object-cover" src={image} alt={name} />
           </div>
         ))}
-      </div>
+      </motion.div>
       <Modal
         className="h-1/2 -bottom-1/2 lg:inset-x-1/4 inset-x-4"
         isOpen={isOpen}

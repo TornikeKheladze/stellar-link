@@ -4,10 +4,14 @@ import { useTranslation } from "react-i18next";
 import BurgerButton from "../shared/BurgerButton";
 import LangDropdown from "./LangDropdown";
 import Sidebar from "./Sidebar";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import HeaderDropdown from "../shared/HeaderDropdown";
-import { useIsInViewport } from "../../helpers/useIsInViewPort";
 import Arrow from "../shared/Arrow";
+import { motion } from "framer-motion";
+import { useDesktopSize } from "../../helpers/useDesktopSize";
+import { useScroll } from "../../helpers/useScroll";
+import { catalogueLinks } from "../../data/catalogue";
+import { brandLinks } from "../../data/brands";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -17,36 +21,12 @@ const Header = () => {
     {
       to: "/catalogue",
       label: "catalogue",
-      hover: (
-        <HeaderDropdown
-          links={[
-            { label: "fireSystems", to: "/catalogue" },
-            { label: "pava", to: "/catalogue" },
-            { label: "cctv", to: "/catalogue" },
-            { label: "bms", to: "/catalogue" },
-            { label: "rms", to: "/catalogue" },
-            { label: "lightingAutomation", to: "/catalogue" },
-          ]}
-        />
-      ),
+      hover: <HeaderDropdown links={catalogueLinks} />,
     },
     {
       to: "/brands",
       label: "brands",
-      hover: (
-        <HeaderDropdown
-          links={[
-            { label: "Honeywell", to: "/brands" },
-            { label: "Morley", to: "/brands" },
-            { label: "Notifier", to: "/brands" },
-            { label: "Esser", to: "/brands" },
-            { label: "Intevio", to: "/brands" },
-            { label: "Variodyn", to: "/brands" },
-            { label: "allBrands", to: "/brands" },
-          ]}
-          className="w-28"
-        />
-      ),
+      hover: <HeaderDropdown links={brandLinks} className="w-28" />,
     },
     {
       to: "/projects",
@@ -57,9 +37,9 @@ const Header = () => {
       label: "contactUs",
     },
   ];
+  const isScrolled = useScroll();
+  const isDesktop = useDesktopSize();
 
-  const headerRef = useRef<HTMLHeadingElement | null>(null);
-  const isInViewport = useIsInViewport(headerRef);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -67,15 +47,22 @@ const Header = () => {
     });
   };
 
+  const variants = {
+    animate: { height: "80px" },
+    initial: { height: isDesktop ? "160px" : "80px" },
+  };
+
   return (
-    <header
-      ref={headerRef}
-      className="h-20 w-full flex justify-between items-center p-7 lg:h-40 shadow-[0px_1px_3px_2px_rgba(0,_0,_0,_0.6)]"
+    <motion.header
+      initial="initial"
+      animate={isScrolled ? "animate" : "initial"}
+      variants={variants}
+      className="w-full fixed backdrop-blur-lg top-0 flex justify-between items-center p-7 shadow-[0px_1px_3px_2px_rgba(0,_0,_0,_0.6)]"
     >
-      {!isInViewport && (
+      {isScrolled && (
         <button
           onClick={scrollToTop}
-          className="bg-primary text-black border border-black fixed w-9 h-9 right-4 top-2/3 rotate-180"
+          className="bg-primary text-black border border-black fixed w-9 h-9 right-4 top-[80vh] rotate-180"
         >
           <Arrow />
         </button>
@@ -87,7 +74,7 @@ const Header = () => {
         {links.map(({ to, label, hover }, index) => (
           <div
             key={label + to}
-            className={`relative hover:text-textHover text-textPrimary px-7 h-[70px] flex items-center justify-center ${
+            className={`relative hover:text-textHover animation text-textPrimary px-7 h-[70px] flex items-center justify-center ${
               index !== links.length - 1 &&
               "border-r border-customBlack border-opacity-70"
             } `}
@@ -115,7 +102,7 @@ const Header = () => {
         isSidebarVisible={isSidebarVisible}
         setIsSidebarVisible={setIsSidebarVisible}
       />
-    </header>
+    </motion.header>
   );
 };
 

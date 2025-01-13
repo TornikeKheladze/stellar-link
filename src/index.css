@@ -21,3 +21,7 @@
 body {
   font-family: "helvetica", "firago", sans-serif;
 }
+
+.animation {
+  @apply transition-all duration-300 ease-in-out;
+}

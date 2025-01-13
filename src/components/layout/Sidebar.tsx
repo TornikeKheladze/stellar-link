@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Backdrop from "./Backdrop";
 import { Link } from "react-router";
 import LangDropdown from "./LangDropdown";
 import CloseBtn from "../shared/CloseBtn";
@@ -23,14 +22,11 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   return (
     <>
-      {isSidebarVisible && (
-        <Backdrop onClick={() => setIsSidebarVisible(false)} />
-      )}
       <motion.div
         initial="hidden"
         animate={isSidebarVisible ? "visible" : "hidden"}
         variants={variants}
-        className="fixed left-0 bottom-0 top-0 bg-white w-[100vw] z-[101] lg:hidden"
+        className="fixed left-0 bottom-0 top-0 w-screen h-screen z-[102] bg-white lg:hidden"
       >
         <div className="h-20 flex items-center justify-between p-7">
           <div></div>

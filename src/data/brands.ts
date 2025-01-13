@@ -30,3 +30,13 @@ export const brands = [
     id: 6,
   },
 ];
+
+export const brandLinks = [
+  { label: "Honeywell", to: "/brands" },
+  { label: "Morley", to: "/brands" },
+  { label: "Notifier", to: "/brands" },
+  { label: "Esser", to: "/brands" },
+  { label: "Intevio", to: "/brands" },
+  { label: "Variodyn", to: "/brands" },
+  { label: "allBrands", to: "/brands" },
+];

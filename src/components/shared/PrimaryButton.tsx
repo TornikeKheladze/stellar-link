@@ -8,7 +8,7 @@ const PrimaryButton: React.FC<{
       onClick={onClick}
       className={`bg-primary border border-primary w-[132px] lg:w-[200px]  
         h-[50px] lg:h-[60px] box-border 
-      hover:bg-white hover:border-black transition-all duration-300
+      hover:bg-white hover:border-black animation
          ${className}`}
     >
       {label}
