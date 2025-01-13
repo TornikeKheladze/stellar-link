@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
-const HeaderDropdown: React.FC<{ links: string[]; className?: string }> = ({
-  links,
-  className,
-}) => {
+const HeaderDropdown: React.FC<{
+  links: { to: string; label: string }[];
+  className?: string;
+}> = ({ links, className }) => {
   const { t } = useTranslation();
   return (
     <div
@@ -14,14 +14,14 @@ const HeaderDropdown: React.FC<{ links: string[]; className?: string }> = ({
       <div className="flex flex-col">
         {links.map((link, index) => (
           <Link
-            key={link + index}
-            to={link}
+            key={link.to + index}
+            to={link.to}
             className={`${
               index !== links.length - 1 &&
               "border-b border-black border-opacity-70 py-1"
             } hover:text-textHover`}
           >
-            {t(link)}
+            {t(link.label)}
           </Link>
         ))}
       </div>

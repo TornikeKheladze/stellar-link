@@ -20,12 +20,12 @@ const Header = () => {
       hover: (
         <HeaderDropdown
           links={[
-            "fireSystems",
-            "pava",
-            "cctv",
-            "bms",
-            "rms",
-            "lightingAutomation",
+            { label: "fireSystems", to: "/catalogue" },
+            { label: "pava", to: "/catalogue" },
+            { label: "cctv", to: "/catalogue" },
+            { label: "bms", to: "/catalogue" },
+            { label: "rms", to: "/catalogue" },
+            { label: "lightingAutomation", to: "/catalogue" },
           ]}
         />
       ),
@@ -36,12 +36,13 @@ const Header = () => {
       hover: (
         <HeaderDropdown
           links={[
-            "Honeywell",
-            "Morley",
-            "Notifier",
-            "Esser",
-            "Intevio",
-            "Variodyn",
+            { label: "Honeywell", to: "/brands" },
+            { label: "Morley", to: "/brands" },
+            { label: "Notifier", to: "/brands" },
+            { label: "Esser", to: "/brands" },
+            { label: "Intevio", to: "/brands" },
+            { label: "Variodyn", to: "/brands" },
+            { label: "allBrands", to: "/brands" },
           ]}
           className="w-28"
         />

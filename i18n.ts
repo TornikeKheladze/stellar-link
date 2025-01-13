@@ -16,6 +16,7 @@ const resources = {
       rms: "RMS Room Management System",
       lightingAutomation: "Lighting Automation",
       contact: "Contact Us",
+      allBrands: "All Brands",
     },
   },
   ka: {
@@ -32,6 +33,7 @@ const resources = {
       rms: "RMS ოთახების მენეჯმენტ სისტემები",
       lightingAutomation: "განათების ავტომატიზაცია",
       contact: "კონტაქტი",
+      allBrands: "ყველა ბრენდი",
     },
   },
 };
