@@ -34,7 +34,7 @@ export default function Footer() {
           <p>+995 598 21 51 53</p>
         </div>
         <div className="w-full flex flex-col items-start gap-2">
-          <h3 className="font-bold text-2xl">socials</h3>
+          <h3 className="font-bold text-2xl">{t("socials")}</h3>
           <a href="#" className="text-primary flex items-center gap-4">
             <FacebookIcon /> <span className="text-black">Facebook</span>
           </a>

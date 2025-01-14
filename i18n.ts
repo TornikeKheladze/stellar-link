@@ -17,6 +17,8 @@ const resources = {
       lightingAutomation: "Lighting Automation",
       contact: "Contact Us",
       allBrands: "All Brands",
+      careers: "Careers",
+      socials: "Socials",
     },
   },
   ka: {
@@ -34,6 +36,8 @@ const resources = {
       lightingAutomation: "განათების ავტომატიზაცია",
       contact: "კონტაქტი",
       allBrands: "ყველა ბრენდი",
+      careers: "ვაკანსიები",
+      socials: "სოც. ქსელები",
     },
   },
 };
