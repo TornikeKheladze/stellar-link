@@ -1,5 +1,6 @@
 import { Link } from "react-router";
-import logoSrc from "../../assets/logo.avif";
+import logoSrc from "../../assets/logo3.png";
+import textSrc from "../../assets/logo2.png";
 import { useTranslation } from "react-i18next";
 import BurgerButton from "../shared/BurgerButton";
 import LangDropdown from "./LangDropdown";
@@ -33,6 +34,10 @@ const Header = () => {
       label: "projects",
     },
     {
+      to: "/careers",
+      label: "careers",
+    },
+    {
       to: "/contact",
       label: "contactUs",
     },
@@ -51,13 +56,20 @@ const Header = () => {
     animate: { height: "80px" },
     initial: { height: isDesktop ? "160px" : "80px" },
   };
-
+  const imgVariants = {
+    animate: { height: "40px" },
+    initial: { height: isDesktop ? "120px" : "60px" },
+  };
+  const textVariants = {
+    animate: { height: isDesktop ? "20px" : "10px" },
+    initial: { height: isDesktop ? "60px" : "30px" },
+  };
   return (
     <motion.header
       initial="initial"
       animate={isScrolled ? "animate" : "initial"}
       variants={variants}
-      className="w-full fixed backdrop-blur-lg top-0 flex justify-between items-center p-7 shadow-[0px_1px_3px_2px_rgba(0,_0,_0,_0.6)]"
+      className="w-full fixed backdrop-blur-lg bg-[#EEF5F3]/50 top-0 flex justify-between items-center p-7 shadow-[0px_1px_3px_2px_rgba(0,_0,_0,_0.6)]"
     >
       {isScrolled && (
         <button
@@ -68,7 +80,8 @@ const Header = () => {
         </button>
       )}
       <Link to={"/"} className="flex items-center">
-        <img src={logoSrc} className="w-20 lg:w-48" />
+        <motion.img variants={imgVariants} src={logoSrc} />
+        <motion.img variants={textVariants} src={textSrc} />
       </Link>
       <div className="hidden lg:flex items-center font-bold text-lg">
         {links.map(({ to, label, hover }, index) => (

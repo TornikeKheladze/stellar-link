@@ -16,4 +16,10 @@ export const careers: {
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita fugit sint quod assumenda cupiditate sunt, repellendus debitis, amet fugiat veniam, sapiente aliquid exercitationem quaerat.",
     image: "/images/careers/career1.webp",
   },
+  {
+    id: 3,
+    title: "ჟეშტიანჩიკი",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita fugit sint quod assumenda cupiditate sunt, repellendus debitis, amet fugiat veniam, sapiente aliquid exercitationem quaerat.",
+    image: "/images/careers/career1.webp",
+  },
 ];

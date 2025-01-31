@@ -16,14 +16,14 @@ const Careers = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        // className="flex flex-wrap justify-center gap-5"
+        className="grid lg:grid-cols-2 gap-5 grid-cols-1"
       >
         {careers.map(({ id, title, text, image }) => (
           <motion.div
             whileHover={{ filter: "brightness(1.2) contrast(1.1)" }}
             transition={{ duration: 0.3, ease: "linear" }}
             key={id + title}
-            className="h-36 lg:h-56 lg:w-1/2 w-full border border-black rounded-md p-2 flex cursor-pointer"
+            className="h-36 lg:h-56 w-full border border-black rounded-md p-2 flex cursor-pointer"
             onClick={() => navigate(`/careers/${id}`)}
           >
             <img src={image} />
