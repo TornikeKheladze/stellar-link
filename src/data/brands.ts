@@ -1,42 +1,42 @@
 export const brands = [
   {
-    name: "Honeywell",
+    name: "ჰანიველი",
     image: "/images/brands/honeywell.jpg",
     id: 1,
   },
   {
-    name: "Johnsons Control",
+    name: "ჯონსონს კონტროლი",
     image: "/images/brands/honeywell.jpg",
     id: 2,
   },
   {
-    name: "Elkron",
+    name: "ელკრონი",
     image: "/images/brands/honeywell.jpg",
     id: 3,
   },
   {
-    name: "BOSCH",
+    name: "ბოში",
     image: "/images/brands/honeywell.jpg",
     id: 4,
   },
   {
-    name: "Siemens",
+    name: "სიმენსი",
     image: "/images/brands/honeywell.jpg",
     id: 5,
   },
   {
-    name: "Satel",
+    name: "სატელი",
     image: "/images/brands/honeywell.jpg",
     id: 6,
   },
 ];
 
 export const brandLinks = [
-  { label: "Honeywell", to: "/brands" },
-  { label: "Johnsons Control", to: "/brands" },
-  { label: "Elkron", to: "/brands" },
-  { label: "BOSCH", to: "/brands" },
-  { label: "Siemens", to: "/brands" },
-  { label: "Satel", to: "/brands" },
-  { label: "allBrands", to: "/brands" },
+  { label: "ჰანიველი", to: "/brands" },
+  { label: "ჯონსონს კონტროლი", to: "/brands" },
+  { label: "ელკრონი", to: "/brands" },
+  { label: "ბოში", to: "/brands" },
+  { label: "სიმენსი", to: "/brands" },
+  { label: "სატელი", to: "/brands" },
+  { label: "ყველა ბრენდი", to: "/brands" },
 ];
