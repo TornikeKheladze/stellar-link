@@ -11,7 +11,7 @@ export const brands = [
   },
   {
     name: "ელკრონი",
-    image: "/images/brands/honeywell.jpg",
+    image: "/images/brands/logo-1.jpg",
     id: 3,
   },
   {
