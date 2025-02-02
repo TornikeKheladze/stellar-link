@@ -44,7 +44,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "ka",
+  lng: "ქა",
   interpolation: {
     escapeValue: false,
   },
