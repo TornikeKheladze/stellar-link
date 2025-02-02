@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="w-full flex flex-col items-start self-start">
           <h3 className="font-bold text-2xl">დაგვიკავშირდი</h3>
           <p>info@stellarlink.ge</p>
-          <p>+995 598 21 51 53</p>
+          <p>+995 322 15 16 </p>
         </div>
         <div className="w-full flex flex-col items-start gap-2">
           <h3 className="font-bold text-2xl">{t("socials")}</h3>
