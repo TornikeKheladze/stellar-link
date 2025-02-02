@@ -5,27 +5,27 @@ export const brands = [
     id: 1,
   },
   {
-    name: "Honeywell",
+    name: "Johnsons Control",
     image: "/images/brands/honeywell.jpg",
     id: 2,
   },
   {
-    name: "Honeywell",
+    name: "Elkron",
     image: "/images/brands/honeywell.jpg",
     id: 3,
   },
   {
-    name: "Honeywell",
+    name: "BOSCH",
     image: "/images/brands/honeywell.jpg",
     id: 4,
   },
   {
-    name: "Honeywell",
+    name: "Siemens",
     image: "/images/brands/honeywell.jpg",
     id: 5,
   },
   {
-    name: "Honeywell",
+    name: "Satel",
     image: "/images/brands/honeywell.jpg",
     id: 6,
   },
