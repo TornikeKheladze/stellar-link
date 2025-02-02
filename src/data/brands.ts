@@ -6,7 +6,7 @@ export const brands = [
   },
   {
     name: "ჯონსონს კონტროლი",
-    image: "/images/brands/honeywell.jpg",
+    image: "/images/brands/Johnson-Controls-Logo.jpg",
     id: 2,
   },
   {
