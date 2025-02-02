@@ -16,17 +16,17 @@ export const brands = [
   },
   {
     name: "ბოში",
-    image: "/images/brands/honeywell.jpg",
+    image: "/images/brands/bosch.jpg",
     id: 4,
   },
   {
     name: "სიმენსი",
-    image: "/images/brands/honeywell.jpg",
+    image: "/images/brands/siemens.jpg",
     id: 5,
   },
   {
     name: "სატელი",
-    image: "/images/brands/honeywell.jpg",
+    image: "/images/brands/satel.jpg",
     id: 6,
   },
 ];
