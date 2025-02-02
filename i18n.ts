@@ -21,7 +21,7 @@ const resources = {
       socials: "Socials",
     },
   },
-  ka: {
+  geo: {
     translation: {
       // layout
       catalogue: "კატალოგი",
@@ -44,7 +44,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "ქა",
+  lng: "geo",
   interpolation: {
     escapeValue: false,
   },
