@@ -64,6 +64,15 @@ const Header = () => {
     animate: { height: isDesktop ? "60px" : "50px" },
     initial: { height: isDesktop ? "80px" : "60px" },
   };
+  // // ეს არი გასასწორებელი
+  // const testVariants = {
+  //   animate: {
+  //     rotate: 360, // Rotate 360 degrees
+  //   },
+  //   initial: {
+  //     rotate: 0, // Start from 0 degrees
+  //   },
+  // };
   return (
     <motion.header
       initial="initial"
@@ -80,7 +89,21 @@ const Header = () => {
         </button>
       )}
       <Link to={"/"} className="flex items-center">
+        {/* <motion.div
+          initial="initial"
+          animate="animate"
+          variants={testVariants}
+          className="flex items-center justify-center"
+          // transition={{
+          //   rotate: {
+          //     duration: 2, // Duration of one full rotation in seconds
+          //     repeat: Infinity, // Repeat the animation infinitely
+          //     ease: "linear", // Linear easing for smooth rotation
+          //   },
+          // }}
+        > */}
         <motion.img variants={imgVariants} src={logoSrc} />
+        {/* </motion.div> */}
         <motion.img variants={textVariants} src={textSrc} />
       </Link>
       <div className="hidden lg:flex items-center font-bold text-lg">

@@ -1,25 +1,5 @@
 export const projects = [
   {
-    id: 1,
-    name: "ჰანიველი",
-    image: "/images/projects/1.jpeg",
-  },
-  {
-    id: 2,
-    name: "Project 2",
-    image: "/images/projects/2.jpeg",
-  },
-  {
-    id: 3,
-    name: "Project 3",
-    image: "/images/projects/3.jpeg",
-  },
-  {
-    id: 4,
-    name: "Project 4",
-    image: "/images/projects/4.jpeg",
-  },
-  {
     id: 5,
     name: "Project 5",
     image: "/images/projects/5.jpeg",
@@ -63,10 +43,5 @@ export const projects = [
     id: 13,
     name: "Project 13",
     image: "/images/projects/13.jpeg",
-  },
-  {
-    id: 14,
-    name: "Project 14",
-    image: "/images/projects/14.jpeg",
   },
 ];
