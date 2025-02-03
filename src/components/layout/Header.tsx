@@ -69,7 +69,7 @@ const Header = () => {
       initial="initial"
       animate={isScrolled ? "animate" : "initial"}
       variants={variants}
-      className="w-full fixed backdrop-blur-lg bg-[#EEF5F3]/50 top-0 flex justify-between items-center p-7 shadow-[0px_1px_3px_2px_rgba(0,_0,_0,_0.6)]"
+      className="w-full z-50 fixed backdrop-blur-lg bg-[#EEF5F3]/50 top-0 flex justify-between items-center p-7 shadow-[0px_1px_3px_2px_rgba(0,_0,_0,_0.6)]"
     >
       {isScrolled && (
         <button

@@ -30,6 +30,7 @@ const resources = {
         responsibilities: "Responsibilities",
         requirements: "Requirements",
         softwareEngineer: "Software Engineer",
+        // "Weak Current Engineer",
         dataScientist: "Data Scientist",
         locationRemote: "Remote",
         locationNY: "New York, NY",

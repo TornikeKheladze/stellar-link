@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Modal from "../components/shared/Modal";
-import { brands } from "../data/brands";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-const Brands = () => {
+import { brands } from "../data/brands";
+
+const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeBrand, setActiveBrand] = useState<{
+  const [activeProject, setActiveProject] = useState<{
     image: string;
     name: string;
     id: number;
@@ -16,7 +17,7 @@ const Brands = () => {
   return (
     <section className="py-9">
       <h1 className="bg-primary lg:w-1/3 w-full mx-auto text-white text-center py-3 text-3xl font-bold mb-5">
-        {t("brands")}
+        {t("projects")}
       </h1>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -30,7 +31,7 @@ const Brands = () => {
             key={id + name}
             onClick={() => {
               setIsOpen(true);
-              setActiveBrand({ image, name, id });
+              setActiveProject({ image, name, id });
             }}
             className="w-36 lg:w-56 flex justify-center items-center border border-customBlack border-opacity-50 shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.3)] hover:shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.5)] animation  rounded-md p-2 cursor-pointer"
           >
@@ -45,8 +46,8 @@ const Brands = () => {
         translateY={-150}
       >
         <div>
-          {activeBrand && (
-            <img src={activeBrand.image} alt={activeBrand.name} />
+          {activeProject && (
+            <img src={activeProject.image} alt={activeProject.name} />
           )}
           <div className="flex flex-col gap-4">
             <p>
@@ -69,4 +70,5 @@ const Brands = () => {
     </section>
   );
 };
-export default Brands;
+
+export default Projects;
