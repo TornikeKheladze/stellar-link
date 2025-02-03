@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-// import footerLogoSrc from "../../assets/footerLogo.avif";
 import footerLogoSrc from "../../assets/logo.png";
 import FacebookIcon from "../shared/FacebookIcon";
 import InstagramLogo from "../shared/InstagramLogo";
@@ -23,14 +22,14 @@ export default function Footer() {
           <img src={footerLogoSrc} alt="stellar-link" className="w-full" />
         </div>
         <div className="w-full flex flex-col items-start self-start">
-          <h3 className="font-bold text-2xl">სათავო ოფისი</h3>
+          <h3 className="font-bold text-2xl">{t("headOffice")}</h3>
           <p>
-            ავთანდილის 6
-            <br /> თბილისი
+            {t("officeCity")}
+            <br /> {t("officeAddress")}
           </p>
         </div>
         <div className="w-full flex flex-col items-start self-start">
-          <h3 className="font-bold text-2xl">დაგვიკავშირდი</h3>
+          <h3 className="font-bold text-2xl">{t("contactUs")}</h3>
           <p>info@stellarlink.ge</p>
           <p>+995 322 15 16 00</p>
         </div>

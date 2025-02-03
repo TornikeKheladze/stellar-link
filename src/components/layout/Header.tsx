@@ -39,7 +39,7 @@ const Header = () => {
     },
     {
       to: "/contact",
-      label: "contactUs",
+      label: "contact",
     },
   ];
   const isScrolled = useScroll();
