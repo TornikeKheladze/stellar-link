@@ -5,6 +5,9 @@ import InstagramLogo from "../shared/InstagramLogo";
 import LinkedinLogo from "../shared/LinkedinLogo";
 import PrimaryButton from "../shared/PrimaryButton";
 import { useNavigate } from "react-router";
+import LocationIcon from "../shared/LocationIcon";
+import EmailIcon from "../shared/EmailIcon";
+import PhoneIcon from "../shared/PhoneIcon";
 export default function Footer() {
   const { t } = useTranslation();
   const scrollToTop = () => {
@@ -23,26 +26,32 @@ export default function Footer() {
         </div>
         <div className="w-full flex flex-col items-start self-start">
           <h3 className="font-bold text-2xl">{t("headOffice")}</h3>
-          <p>
-            {t("officeCity")}
-            <br /> {t("officeAddress")}
-          </p>
+          <div className="text-textPrimary">
+            <p className="flex gap-3 items-center">
+              <LocationIcon /> {t("officeCity")}
+            </p>
+            <p>{t("officeAddress")}</p>
+          </div>
         </div>
         <div className="w-full flex flex-col items-start self-start">
           <h3 className="font-bold text-2xl">{t("contactUs")}</h3>
-          <p>info@stellarlink.ge</p>
-          <p>+995 322 15 16 00</p>
+          <p className="text-textPrimary flex gap-4 items-center">
+            <EmailIcon /> <span>info@stellarlink.ge</span>
+          </p>
+          <p className="text-textPrimary flex gap-4 items-center">
+            <PhoneIcon /> <span>+995 322 15 16 00</span>
+          </p>
         </div>
         <div className="w-full flex flex-col items-start gap-2">
           <h3 className="font-bold text-2xl">{t("socials")}</h3>
-          <a href="#" className="text-primary flex items-center gap-4">
+          <a href="#" className="text-textPrimary flex items-center gap-4">
             <FacebookIcon /> <span className="">Facebook</span>
           </a>
-          <a href="#" className="text-primary flex items-center gap-4">
+          <a href="#" className="text-textPrimary flex items-center gap-4">
             <InstagramLogo />
             <span className="">Instagram</span>
           </a>
-          <a href="#" className="text-primary flex items-center gap-4">
+          <a href="#" className="text-textPrimary flex items-center gap-4">
             <LinkedinLogo /> <span className="">Linkedin</span>
           </a>
         </div>

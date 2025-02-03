@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import { careersEng, careersGeo } from "./src/data/careers";
 
 const resources = {
   en: {
@@ -12,8 +13,8 @@ const resources = {
       officeCity: "Tbilisi",
       officeAddress: "Avtandili Street N6",
       fireSystems: "Fire Alarm & Detection",
-      pava: "PAVA Public address",
-      cctv: "CCTV Video survilance",
+      pava: "PAVA Public Address",
+      cctv: "CCTV Video Surveillance",
       bms: "BMS Building Management Systems",
       rms: "RMS Room Management System",
       lightingAutomation: "Lighting Automation",
@@ -22,45 +23,27 @@ const resources = {
       career: "Careers",
       socials: "Socials",
       location: "Location",
-      careers: {
-        applyRules:
-          "Send your CV to the email address info@stellarlink.ge. Specify the job title in the subject line.",
-        salary: "Salary",
-        jobDescription: "Job Description",
-        responsibilities: "Responsibilities",
-        requirements: "Requirements",
-        softwareEngineer: "Software Engineer",
-        // "Weak Current Engineer",
-        dataScientist: "Data Scientist",
-        locationRemote: "Remote",
-        locationNY: "New York, NY",
-        salarySE: "$90,000 - $120,000",
-        salaryDS: "$100,000 - $130,000",
-        descriptionSE:
-          "We are looking for a skilled Software Engineer to join our team and help build innovative software solutions.",
-        descriptionDS:
-          "We are seeking a Data Scientist to analyze complex data and provide actionable insights.",
-        responsibilitiesSE: [
-          "Develop and maintain web applications.",
-          "Collaborate with cross-functional teams.",
-          "Write clean, scalable, and efficient code.",
-        ],
-        responsibilitiesDS: [
-          "Analyze large datasets to identify trends.",
-          "Build predictive models and machine learning algorithms.",
-          "Present findings to stakeholders.",
-        ],
-        requirementsSE: [
-          "Bachelor's degree in Computer Science or related field.",
-          "3+ years of experience in software development.",
-          "Proficiency in JavaScript, React, and Node.js.",
-        ],
-        requirementsDS: [
-          "Master's degree in Data Science or related field.",
-          "Experience with Python, R, and SQL.",
-          "Strong knowledge of machine learning techniques.",
-        ],
-      },
+      careers: careersEng,
+
+      comfort: "Comfort",
+      safety: "Safety",
+      security: "Security",
+
+      smartHouseSystems: "Smart House Systems",
+      hvacSystems: "Heat Ventilation Air Conditioning (HVAC) Systems",
+      backgroundMusic: "Background Music (BGM)",
+
+      fireAlarm: "Fire Alarm (FA)",
+      fireFightingSystem: "Fire Fighting System (FFS)",
+      accessControlSystems: "Access Control Systems (ACS)",
+
+      cctvCameras: "CCTV Cameras",
+      intrusionDetection: "Intrusion Detection/Intelligent Security Systems",
+      publicAddresses: "Public Addresses (PA)",
+
+      smartSolutions: "Smart Solutions for Your Home and Business",
+      enhancingComfortSafetySecurity:
+        "Enhancing comfort, safety, and security with cutting-edge technology.",
     },
   },
   ka: {
@@ -68,7 +51,7 @@ const resources = {
       catalogue: "კატალოგი",
       brands: "ბრენდები",
       projects: "პროექტები",
-      contactUs: "დაგვიკავშირდი",
+      contactUs: "დაგვიკავშირდით",
       headOffice: "სათავო ოფისი",
       officeCity: "თბილისი",
       officeAddress: "ავთანდილის ქუჩა N6",
@@ -83,44 +66,27 @@ const resources = {
       career: "ვაკანსიები",
       socials: "სოც. ქსელები",
       location: "ლოკაცია",
-      careers: {
-        applyRules:
-          "მონაცემები (CV) გამოაგზავნეთ ელექტრონული ფოსტის მისამართზე info@stellarlink.ge. Subject-ში მიუთითეთ პოზიციის დასახელება.",
-        salary: "ხელფასი",
-        jobDescription: "სამუშაო აღწერა",
-        responsibilities: "ვალდებულებები",
-        requirements: "მოთხოვნები",
-        softwareEngineer: "პროგრამული ინჟინერი",
-        dataScientist: "მონაცემთა მეცნიერი",
-        locationRemote: "დისტანციურად",
-        locationNY: "ნიუ იორკი, აშშ",
-        salarySE: "$90,000 - $120,000",
-        salaryDS: "$100,000 - $130,000",
-        descriptionSE:
-          "ჩვენ ვეძებთ გამოცდილ პროგრამულ ინჟინერს, რომელიც დაგვეხმარება ინოვაციური პროგრამული გადაწყვეტების შექმნაში.",
-        descriptionDS:
-          "ჩვენ ვეძებთ მონაცემთა მეცნიერს, რომელიც გააანალიზებს მონაცემებს და გამოიმუშავებს გამოსადეგ იდეებს.",
-        responsibilitiesSE: [
-          "ვებ აპლიკაციების შემუშავება და შენარჩუნება.",
-          "თანამშრომლობა სხვადასხვა გუნდებთან.",
-          "სუფთა, მასშტაბირებადი და ეფექტური კოდის წერა.",
-        ],
-        responsibilitiesDS: [
-          "დიდი მონაცემთა ბაზების ანალიზი და ტენდენციების აღმოჩენა.",
-          "პროგნოზირების მოდელებისა და მანქანური სწავლების ალგორითმების შექმნა.",
-          "მიღებული შედეგების წარდგენა დაინტერესებულ მხარეებთან.",
-        ],
-        requirementsSE: [
-          "ბაკალავრის ხარისხი კომპიუტერულ მეცნიერებაში ან შესაბამის სფეროში.",
-          "3+ წლიანი გამოცდილება პროგრამული უზრუნველყოფის განვითარებაში.",
-          "JavaScript, React და Node.js-ის ცოდნა.",
-        ],
-        requirementsDS: [
-          "მონაცემთა მეცნიერების ან შესაბამის სფეროში მაგისტრის ხარისხი.",
-          "Python, R და SQL-ის გამოცდილება.",
-          "მანქანური სწავლების ტექნიკების ძლიერი ცოდნა.",
-        ],
-      },
+      careers: careersGeo,
+
+      comfort: "კომფორტი",
+      safety: "უსაფრთხოება",
+      security: "დაცულობა",
+
+      smartHouseSystems: "ჭკვიანი სახლი",
+      hvacSystems: "გათბობა, გაგრილება, ვენტილაცია",
+      backgroundMusic: "ფონური მუსიკა",
+
+      fireAlarm: "ხანძრის დეტექცია",
+      fireFightingSystem: "ხანძარქობა",
+      accessControlSystems: "შეღწევის/წვდომის სისტემა",
+
+      cctvCameras: "ვიდეო სამეთვალყურეო სისტემა",
+      intrusionDetection: "დაცვის/შეღწევის სისტემა",
+      publicAddresses: "საჯარო გამოცხადება",
+
+      smartSolutions: "ჭკვიანი გადაწყვეტილებები თქვენს სახლში და ბიზნესში",
+      enhancingComfortSafetySecurity:
+        "კომფორტის, უსაფრთხოების და დაცვის გაუმჯობესება უახლესი ტექნოლოგიებით.",
     },
   },
 };
