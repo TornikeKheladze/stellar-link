@@ -35,7 +35,7 @@ const Header = () => {
     },
     {
       to: "/careers",
-      label: "careers",
+      label: "career",
     },
     {
       to: "/contact",
@@ -61,7 +61,7 @@ const Header = () => {
     initial: { height: isDesktop ? "120px" : "60px" },
   };
   const textVariants = {
-    animate: { height: isDesktop ? "20px" : "10px" },
+    animate: { height: "20px" },
     initial: { height: isDesktop ? "60px" : "30px" },
   };
   return (

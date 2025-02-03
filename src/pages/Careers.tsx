@@ -1,15 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
-import { careers } from "../data/careers";
+import { useCareersData } from "../helpers/useCareersData";
 
 const Careers = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { careers } = useCareersData();
+
   return (
     <section className="py-9">
       <h1 className="bg-primary lg:w-1/3 w-full mx-auto text-white text-center py-3 text-3xl font-bold mb-5">
-        {t("careers")}
+        {t("career")}
       </h1>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -18,7 +20,7 @@ const Careers = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="grid lg:grid-cols-2 gap-5 grid-cols-1"
       >
-        {careers.map(({ id, title, text, image }) => (
+        {careers.map(({ id, title, description, image }) => (
           <motion.div
             whileHover={{ filter: "brightness(1.2) contrast(1.1)" }}
             transition={{ duration: 0.3, ease: "linear" }}
@@ -31,7 +33,9 @@ const Careers = () => {
               <h2 className="lg:text-xl text-lg font-semibold text-primary">
                 {title}
               </h2>
-              <p className="text-xs lg:text-sm text-pretty truncate">{text}</p>
+              <p className="text-xs lg:text-sm text-pretty truncate">
+                {description}
+              </p>
             </div>
           </motion.div>
         ))}
