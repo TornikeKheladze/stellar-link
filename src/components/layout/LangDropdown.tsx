@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import Arrow from "../shared/Arrow";
 import { useEffect, useRef, useState } from "react";
+import Arrow from "../../assets/icons/Arrow";
 
 const LangDropdown: React.FC<{ className?: string }> = ({ className }) => {
   const [open, setOpen] = useState(false);

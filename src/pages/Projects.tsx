@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "../components/shared/Modal";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { brands } from "../data/brands";
+import { projects } from "../data/projects";
 
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,45 +26,33 @@ const Projects = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="flex flex-wrap justify-center gap-5"
       >
-        {brands.map(({ id, image, name }) => (
+        {projects.map(({ id, image, name }) => (
           <div
             key={id + name}
             onClick={() => {
               setIsOpen(true);
               setActiveProject({ image, name, id });
             }}
-            className="w-36 lg:w-56 flex justify-center items-center border border-customBlack border-opacity-50 shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.3)] hover:shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.5)] animation  rounded-md p-2 cursor-pointer"
+            className="w-36 lg:w-56 flex justify-center items-center border-opacity-50 hover:shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.3)] animation  rounded-md p-2 cursor-pointer"
           >
             <img className="object-cover" src={image} alt={name} />
           </div>
         ))}
       </motion.div>
       <Modal
-        className="h-1/2 -bottom-1/2 lg:inset-x-1/4 inset-x-4"
+        className="h-[90vh] inset-x-[15px] -bottom-[90vh] overflow-hidden"
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        translateY={-150}
+        // translateY={-344}
       >
         <div>
           {activeProject && (
-            <img src={activeProject.image} alt={activeProject.name} />
+            <img
+              src={activeProject.image}
+              alt={activeProject.name}
+              className="object-cover w-full"
+            />
           )}
-          <div className="flex flex-col gap-4">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem distinctio delectus quidem dolorem ea alias minima.
-              Non veniam repudiandae nam perferendis praesentium error
-              necessitatibus quia consectetur velit. Officia, sapiente aut?
-            </p>
-            <a
-              className="text-blue-600"
-              target="_blank"
-              rel="noreferrer"
-              href="test.com"
-            >
-              test.com
-            </a>
-          </div>
         </div>
       </Modal>
     </section>

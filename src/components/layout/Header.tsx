@@ -1,18 +1,18 @@
 import { Link } from "react-router";
-import logoSrc from "../../assets/logo3.png";
-import textSrc from "../../assets/logo2.png";
+import logoSrc from "../../../public/images/logo.png";
+import textSrc from "../../../public/images/StellarText.png";
 import { useTranslation } from "react-i18next";
-import BurgerButton from "../shared/BurgerButton";
 import LangDropdown from "./LangDropdown";
 import Sidebar from "./Sidebar";
 import { useState } from "react";
 import HeaderDropdown from "../shared/HeaderDropdown";
-import Arrow from "../shared/Arrow";
 import { motion } from "framer-motion";
 import { useDesktopSize } from "../../helpers/useDesktopSize";
 import { useScroll } from "../../helpers/useScroll";
 import { catalogueLinks } from "../../data/catalogue";
 import { brandLinks } from "../../data/brands";
+import Arrow from "../../assets/icons/Arrow";
+import BurgerButton from "../../assets/icons/BurgerButton";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -61,8 +61,8 @@ const Header = () => {
     initial: { height: isDesktop ? "120px" : "60px" },
   };
   const textVariants = {
-    animate: { height: "20px" },
-    initial: { height: isDesktop ? "60px" : "30px" },
+    animate: { height: isDesktop ? "60px" : "50px" },
+    initial: { height: isDesktop ? "80px" : "60px" },
   };
   return (
     <motion.header

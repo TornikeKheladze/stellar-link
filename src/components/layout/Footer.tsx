@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
-import footerLogoSrc from "../../assets/logo.png";
-import FacebookIcon from "../shared/FacebookIcon";
-import InstagramLogo from "../shared/InstagramLogo";
-import LinkedinLogo from "../shared/LinkedinLogo";
-import PrimaryButton from "../shared/PrimaryButton";
+import footerLogoSrc from "../../../public/images/fullLogo.png";
+import FacebookIcon from "../../assets/icons/FacebookIcon";
+import InstagramLogo from "../../assets/icons/InstagramLogo";
+import LinkedinLogo from "../../assets/icons/LinkedinLogo";
 import { useNavigate } from "react-router";
-import LocationIcon from "../shared/LocationIcon";
-import EmailIcon from "../shared/EmailIcon";
-import PhoneIcon from "../shared/PhoneIcon";
+import LocationIcon from "../../assets/icons/LocationIcon";
+import EmailIcon from "../../assets/icons/EmailIcon";
+import PhoneIcon from "../../assets/icons/PhoneIcon";
+import PrimaryButton from "../shared/PrimaryButton";
 export default function Footer() {
   const { t } = useTranslation();
   const scrollToTop = () => {
