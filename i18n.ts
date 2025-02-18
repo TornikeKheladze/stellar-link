@@ -57,7 +57,7 @@ const resources = {
       headOffice: "სათავო ოფისი",
       officeCity: "თბილისი",
       officeAddress: "ავთანდილის ქუჩა N6",
-      fireSystems: "სახანძრო სისტემები",
+      fireSystems: "FA სახანძრო სისტემები",
       pava: "PAVA საჯარო მიმართვის ხელსაწყოები",
       cctv: "CCTV ვიდეო მეთვალყურეობა",
       bms: "BMS ნაგებობების მართვის სისტემები",

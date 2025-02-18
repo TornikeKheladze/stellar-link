@@ -9,10 +9,10 @@ import HeaderDropdown from "../shared/HeaderDropdown";
 import { motion } from "framer-motion";
 import { useDesktopSize } from "../../helpers/useDesktopSize";
 import { useScroll } from "../../helpers/useScroll";
-import { catalogueLinks } from "../../data/catalogue";
 import { brandLinks } from "../../data/brands";
 import Arrow from "../../assets/icons/Arrow";
 import BurgerButton from "../../assets/icons/BurgerButton";
+import { catalogues } from "../../data/catalogue";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -23,7 +23,7 @@ const Header = () => {
     {
       to: "/catalogue",
       label: "catalogue",
-      hover: <HeaderDropdown links={catalogueLinks} />,
+      hover: <HeaderDropdown links={catalogues} />,
     },
     {
       to: "/brands",
