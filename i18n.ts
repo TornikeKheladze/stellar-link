@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { careersEng, careersGeo } from "./src/data/careers";
+import { brandTranslate } from "./src/data/brands";
 
 const resources = {
   en: {
@@ -24,6 +25,7 @@ const resources = {
       socials: "Socials",
       location: "Location",
       careers: careersEng,
+      ...brandTranslate.eng,
 
       comfort: "Comfort",
       safety: "Safety",
@@ -67,6 +69,7 @@ const resources = {
       socials: "სოც. ქსელები",
       location: "ლოკაცია",
       careers: careersGeo,
+      ...brandTranslate.geo,
 
       comfort: "კომფორტი",
       safety: "უსაფრთხოება",

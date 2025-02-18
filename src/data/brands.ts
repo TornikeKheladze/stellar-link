@@ -32,11 +32,30 @@ export const brands = [
 ];
 
 export const brandLinks = [
-  { label: "ჰანიველი", to: "/brands" },
-  { label: "ჯონსონს კონტროლი", to: "/brands" },
-  { label: "ელკრონი", to: "/brands" },
-  { label: "ბოში", to: "/brands" },
-  { label: "სიმენსი", to: "/brands" },
-  { label: "სატელი", to: "/brands" },
-  { label: "ყველა ბრენდი", to: "/brands" },
+  { label: "honeywell", to: "/brands" },
+  { label: "jonsonsControls", to: "/brands" },
+  { label: "elkron", to: "/brands" },
+  { label: "bosch", to: "/brands" },
+  { label: "siemens", to: "/brands" },
+  { label: "satel", to: "/brands" },
+  { label: "allBrands", to: "/brands" },
 ];
+
+export const brandTranslate = {
+  eng: {
+    honeywell: "Honeywell",
+    jonsonsControls: "Johnson Controls",
+    elkron: "Elkron",
+    bosch: "Bosch",
+    siemens: "Siemens",
+    satel: "Satel",
+  },
+  geo: {
+    honeywell: "ჰანიველი",
+    jonsonsControls: "ჯონსონს კონტროლი",
+    elkron: "ელკრონი",
+    bosch: "ბოში",
+    siemens: "სიმენსი",
+    satel: "სატელი",
+  },
+};

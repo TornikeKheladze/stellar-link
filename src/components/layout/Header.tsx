@@ -15,7 +15,9 @@ import Arrow from "../../assets/icons/Arrow";
 import BurgerButton from "../../assets/icons/BurgerButton";
 
 const Header = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  console.log(i18n.language);
+
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [showDropdown, setShowDropdown] = useState<number | boolean>(false);
   const links = [
