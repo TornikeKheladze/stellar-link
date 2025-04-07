@@ -25,7 +25,7 @@ const Catalogue = () => {
         {t("catalogue")}
       </h1>
       <div className="container mx-auto px-4">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 items-center">
           {catalogues.map((item) => (
             <CatalogueDesc key={item.label} item={item} />
           ))}

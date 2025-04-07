@@ -26,16 +26,17 @@ const Brands = () => {
         className="flex flex-wrap justify-center gap-5"
       >
         {brands.map(({ id, image, name }) => (
-          <div
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             key={id + name}
             onClick={() => {
               setIsOpen(true);
               setActiveBrand({ image, name, id });
             }}
-            className="w-36 lg:w-56 flex justify-center items-center border border-customBlack border-opacity-50 shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.3)] hover:shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.5)] animation  rounded-md p-2 cursor-pointer"
+            className="w-full h-60 lg:w-72 lg:h-72 flex justify-center items-center border border-customBlack border-opacity-50 shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.3)] hover:shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.5)] animation  rounded-md p-2 cursor-pointer"
           >
             <img className="object-cover" src={image} alt={name} />
-          </div>
+          </motion.div>
         ))}
       </motion.div>
       <Modal
@@ -46,23 +47,29 @@ const Brands = () => {
       >
         <div>
           {activeBrand && (
-            <img src={activeBrand.image} alt={activeBrand.name} />
+            <div className="flex justify-center">
+              <img
+                src={activeBrand.image}
+                alt={activeBrand.name}
+                className="w-1/2"
+              />
+            </div>
           )}
-          <div className="flex flex-col gap-4">
-            <p>
+          <div className="flex flex-col gap-4 items-center">
+            <p className="text-center">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Exercitationem distinctio delectus quidem dolorem ea alias minima.
               Non veniam repudiandae nam perferendis praesentium error
               necessitatibus quia consectetur velit. Officia, sapiente aut?
             </p>
-            <a
+            {/* <a
               className="text-blue-600"
               target="_blank"
               rel="noreferrer"
               href="test.com"
             >
               test.com
-            </a>
+            </a> */}
           </div>
         </div>
       </Modal>

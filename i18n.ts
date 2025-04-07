@@ -27,6 +27,12 @@ const resources = {
       careers: careersEng,
       ...brandTranslate.eng,
 
+      // Projects
+      hilton: "Hilton Garden Inn Tbilisi",
+      merani: "Merani Mall Tbilisi",
+      lopota: "Lopota Resort Telavi",
+      ibis: "ibis Styles Batumi",
+
       comfort: "Comfort",
       safety: "Safety",
       security: "Security",
@@ -54,7 +60,7 @@ const resources = {
       brands: "ბრენდები",
       projects: "პროექტები",
       contactUs: "დაგვიკავშირდით",
-      headOffice: "სათავო ოფისი",
+      headOffice: "სათაო ოფისი",
       officeCity: "თბილისი",
       officeAddress: "ავთანდილის ქუჩა N6",
       fireSystems: "FA სახანძრო სისტემები",
@@ -70,6 +76,12 @@ const resources = {
       location: "ლოკაცია",
       careers: careersGeo,
       ...brandTranslate.geo,
+
+      // Projects
+      hilton: "ჰილტონ გარდენ ინი თბილისი",
+      merani: "მერანი მოლი თბილისი",
+      lopota: "ლოპოტა თელავი",
+      ibis: "იბის სტაილსი ბათუმი",
 
       comfort: "კომფორტი",
       safety: "უსაფრთხოება",

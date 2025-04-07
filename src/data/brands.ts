@@ -1,5 +1,10 @@
 export const brands = [
   {
+    name: "LTS",
+    image: "/images/brands/lts.jpeg",
+    id: 7,
+  },
+  {
     name: "ჰანიველი",
     image: "/images/brands/honeywell.jpg",
     id: 1,
@@ -16,7 +21,7 @@ export const brands = [
   },
   {
     name: "ბოში",
-    image: "/images/brands/bosch.jpg",
+    image: "/images/brands/bosch.jpeg",
     id: 4,
   },
   {

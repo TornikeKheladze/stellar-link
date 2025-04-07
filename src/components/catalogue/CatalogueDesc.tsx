@@ -38,14 +38,17 @@ const CatalogueDesc: React.FC<{ item: Catalogue }> = ({ item }) => {
     );
   } else {
     return (
-      <div id={item.label} className="shadow-lg rounded-lg overflow-hidden">
+      <div
+        id={item.label}
+        className="shadow-lg rounded-lg overflow-hidden w-2/3"
+      >
         <div className="relative">
           <img
             src={item.image}
             alt={item.label}
             className="w-full object-cover"
           />
-          <ul className="bg-primary flex gap-6 flex-col bg-opacity-0 cursor-pointer hover:bg-opacity-60 animation duration-700 text-white p-6 absolute bottom-0 w-full list-disc">
+          <ul className="bg-primary flex gap-4 flex-col bg-opacity-0 cursor-pointer hover:bg-opacity-60 animation duration-700 text-white p-6 absolute bottom-0 w-full list-disc">
             {item.features.map((feature, index) => (
               <li className="list-item" key={feature.en + index}>
                 <strong>{feature[language].split(":")[0]}</strong>:

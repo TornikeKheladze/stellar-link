@@ -27,31 +27,38 @@ const Projects = () => {
         className="flex flex-wrap justify-center gap-5"
       >
         {projects.map(({ id, image, name }) => (
-          <div
+          <motion.div
             key={id + name}
             onClick={() => {
               setIsOpen(true);
               setActiveProject({ image, name, id });
             }}
-            className="w-36 lg:w-56 flex justify-center items-center border-opacity-50 hover:shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.3)] animation  rounded-md p-2 cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            className="bg-primary bg-opacity-30 w-44 lg:w-64 flex flex-col items-center gap-3 justify-between  border-opacity-50 hover:shadow-[0px_0px_5px_4px_rgba(0,_0,_0,_0.3)] animation  rounded-md p-2 cursor-pointer"
           >
-            <img className="object-cover" src={image} alt={name} />
-          </div>
+            <img className="object-cover rounded-lg" src={image} alt={name} />
+            <p className="text-center text-xl font-medium">{t(name)}</p>
+          </motion.div>
         ))}
       </motion.div>
       <Modal
-        className="h-[90vh] inset-x-[15px] -bottom-[90vh] overflow-hidden"
+        className="h-[60vh] -bottom-[60vh] lg:inset-x-1/4 inset-x-4"
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         // translateY={-344}
       >
-        <div>
+        <div className="h-full flex items-center justify-center flex-col gap-3">
           {activeProject && (
-            <img
-              src={activeProject.image}
-              alt={activeProject.name}
-              className="object-cover w-full"
-            />
+            <>
+              <img
+                src={activeProject.image}
+                alt={activeProject.name}
+                className="h-[40vh] object-center"
+              />
+              <p className="text-center text-xl font-medium">
+                {t(activeProject.name)}
+              </p>
+            </>
           )}
         </div>
       </Modal>
