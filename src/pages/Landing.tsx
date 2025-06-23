@@ -18,7 +18,7 @@ const serviceCategories: ServiceCategory[] = [
   },
 ];
 import { useTranslation } from "react-i18next";
-import mainImg from "../../public/images/mainPhoto.jpeg";
+// import mainImg from "../../public/images/mainPhoto.jpeg";
 
 const LandingPage = () => {
   const { t } = useTranslation();
@@ -26,7 +26,14 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen">
       <div className="relative z-0">
-        <img src={mainImg} alt="mainimage" className="object-cover w-full" />
+        {/* <img src={mainImg} alt="mainimage" className="object-cover w-full" /> */}
+        <video
+          src="https://edge.sitecorecloud.io/nurnbergmes0e18-nmmultisite6e34-prod50da-6065/media/Project/NuernbergMesse/FeuerTrutz/Video/feuertrutz_homepagevideo_1920.mp4"
+          className="w-full bg-red-400 object-cover h-full mt-40"
+          autoPlay
+          loop
+          muted
+        ></video>
         <div className="bg-primary bg-opacity-30 text-white p-6 absolute bottom-0 w-full ">
           <div className="container mx-auto text-center">
             <h1 className="lg:text-4xl text-xl font-bold">
