@@ -7,20 +7,20 @@ type ServiceCategory = {
 
 const serviceCategories: ServiceCategory[] = [
   {
-    title: "comfort",
-    items: ["smartHouseSystems", "hvacSystems", "backgroundMusic"],
-    videoSrc: "https://img.yfisher.com/m4901/1730714172110-114-1x264mp4.mp4",
-  },
-  {
     title: "safety",
     items: ["fireAlarm", "fireFightingSystem", "accessControlSystems"],
     videoSrc:
       "https://edge.sitecorecloud.io/nurnbergmes0e18-nmmultisite6e34-prod50da-6065/media/Project/NuernbergMesse/FeuerTrutz/Video/feuertrutz_homepagevideo_1920.mp4",
   },
   {
+    title: "comfort",
+    items: ["smartHouseSystems", "hvacSystems", "backgroundMusic"],
+    imageSrc: "/images/comfort.png",
+  },
+  {
     title: "security",
     items: ["cctvCameras", "intrusionDetection", "publicAddresses"],
-    imageSrc: "/images/cctv.png",
+    imageSrc: "/images/safety.png",
   },
 ];
 import { useTranslation } from "react-i18next";
