@@ -6,6 +6,7 @@ import Careers from "./pages/Careers";
 import Career from "./pages/Career";
 import Projects from "./pages/Projects";
 import Catalogue from "./pages/Catalogue";
+import Partners from "./pages/Partnets";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route element={<Landing />} path="/" />
         <Route element={<Brands />} path="/brands" />
         <Route element={<Projects />} path="/projects" />
+        <Route element={<Partners />} path="/partners" />
         <Route element={<Careers />} path="/careers" />
         <Route element={<Career />} path="/careers/:id" />
         <Route element={<Catalogue />} path="/catalogue" />

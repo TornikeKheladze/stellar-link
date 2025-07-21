@@ -35,6 +35,10 @@ const Header = () => {
       label: "projects",
     },
     {
+      to: "/partners",
+      label: "partners",
+    },
+    {
       to: "/careers",
       label: "career",
     },
