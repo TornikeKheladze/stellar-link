@@ -31,7 +31,7 @@ import HorizontalWheelSlider from "../components/Slider/Slider";
 //   },
 // ];
 
-const Partners = () => {
+const AfxFireBlocker = () => {
   const slides = [
     {
       id: 1,
@@ -81,7 +81,6 @@ const Partners = () => {
 
   return (
     <div className="p-8 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-8">Partners</h1>
       <div className="text-center bg-[#f9e300] rounded-lg p-4 text-black">
         <h3 className="text-4xl">AF-X Fireblocker</h3>
       </div>
@@ -93,4 +92,4 @@ const Partners = () => {
   );
 };
 
-export default Partners;
+export default AfxFireBlocker;

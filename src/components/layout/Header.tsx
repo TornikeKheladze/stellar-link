@@ -35,17 +35,21 @@ const Header = () => {
       label: "projects",
     },
     {
-      to: "/partners",
-      label: "partners",
+      to: "/afx-fireblocker",
+      label: "AF-X Fireblocker",
+    },
+    {
+      to: "/detectortesters",
+      label: "Detector Testers",
     },
     {
       to: "/careers",
       label: "career",
     },
-    {
-      to: "/contact",
-      label: "contact",
-    },
+    // {
+    //   to: "/contact",
+    //   label: "contact",
+    // },
   ];
   const isScrolled = useScroll();
   const isDesktop = useDesktopSize();
