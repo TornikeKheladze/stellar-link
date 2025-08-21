@@ -31,13 +31,14 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen">
       <div className="relative z-0">
-        <video
+        <div className="mt-52 lg:mt-80"></div>
+        {/* <video
           src="https://img.yfisher.com/m4901/1730714172110-114-1x264mp4.mp4"
           className="w-full object-cover h-full mt-20 lg:mt-40 "
           autoPlay
           loop
           muted
-        ></video>
+        ></video> */}
         <div className="bg-primary bg-opacity-30 text-white p-1 lg:p-6 absolute bottom-0 w-full ">
           <div className="container mx-auto text-center">
             <h1 className="lg:text-4xl text-lg font-bold">
